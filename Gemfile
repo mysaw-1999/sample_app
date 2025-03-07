@@ -16,6 +16,18 @@ gem "sqlite3",         "1.6.1"
 gem "concurrent-ruby", "1.3.4"
 gem "bigdecimal",      "3.1.8"
 gem "mutex_m",         "0.3.0"
+gem "getoptlong",      "0.2.1"
+gem "base64",          "0.2.0"
+gem "observer",        "0.1.2"
+gem "abbrev",          "0.1.2"
+gem "resolv-replace",  "0.1.1"
+gem "rinda",           "0.2.0"
+gem "drb",             "2.2.1"
+gem "nkf",             "0.2.0"
+gem "syslog",          "0.2.0"
+gem "csv",             "3.3.1"
+
+
 
 group :development, :test do
   gem 'reline', '0.5.10'

@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    abbrev (0.1.2)
     actioncable (7.0.8.7)
       actionpack (= 7.0.8.7)
       activesupport (= 7.0.8.7)
@@ -90,15 +91,19 @@ GEM
     coderay (1.1.3)
     concurrent-ruby (1.3.4)
     crass (1.0.6)
+    csv (3.3.1)
     date (3.4.1)
     debug (1.7.1)
       irb (>= 1.5.0)
       reline (>= 0.3.1)
     diff-lcs (1.6.0)
+    drb (2.2.1)
     erubi (1.13.1)
     ffi (1.17.1)
     ffi (1.17.1-x86_64-darwin)
     formatador (1.1.0)
+    forwardable (1.3.3)
+    getoptlong (0.2.1)
     globalid (1.2.1)
       activesupport (>= 6.1)
     guard (2.18.0)
@@ -120,6 +125,7 @@ GEM
       actionpack (>= 6.0.0)
       railties (>= 6.0.0)
     io-console (0.8.0)
+    ipaddr (1.2.7)
     irb (1.10.0)
       rdoc
       reline (>= 0.3.8)
@@ -171,6 +177,7 @@ GEM
     net-smtp (0.5.1)
       net-protocol
     nio4r (2.7.4)
+    nkf (0.2.0)
     nokogiri (1.18.3)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
@@ -246,9 +253,16 @@ GEM
     repl_type_completor (0.1.2)
       prism (>= 0.19.0, < 0.20.0)
       rbs (>= 2.7.0, < 4.0.0)
+    resolv (0.6.0)
+    resolv-replace (0.1.1)
+      resolv
     reverse_markdown (3.0.0)
       nokogiri
     rexml (3.4.1)
+    rinda (0.2.0)
+      drb
+      forwardable
+      ipaddr
     rubocop (1.73.2)
       json (~> 2.3)
       language_server-protocol (~> 3.17.0.2)
@@ -307,6 +321,7 @@ GEM
     stimulus-rails (1.2.1)
       railties (>= 6.0.0)
     stringio (3.1.5)
+    syslog (0.2.0)
     thor (1.3.2)
     tilt (2.6.0)
     timeout (0.4.3)
@@ -343,11 +358,16 @@ PLATFORMS
   x86_64-darwin-22
 
 DEPENDENCIES
+  abbrev (= 0.1.2)
+  base64 (= 0.2.0)
   bigdecimal (= 3.1.8)
   bootsnap (= 1.16.0)
   capybara (= 3.38.0)
   concurrent-ruby (= 1.3.4)
+  csv (= 3.3.1)
   debug (= 1.7.1)
+  drb (= 2.2.1)
+  getoptlong (= 0.2.1)
   guard (= 2.18.0)
   guard-minitest (= 2.4.6)
   importmap-rails (= 1.1.5)
@@ -356,17 +376,22 @@ DEPENDENCIES
   minitest (= 5.18.0)
   minitest-reporters (= 1.6.0)
   mutex_m (= 0.3.0)
+  nkf (= 0.2.0)
+  observer (= 0.1.2)
   puma (= 5.6.8)
   rails (= 7.0.8.7)
   rails-controller-testing (= 1.0.5)
   reline (= 0.5.10)
   repl_type_completor (= 0.1.2)
+  resolv-replace (= 0.1.1)
+  rinda (= 0.2.0)
   sassc-rails (= 2.1.2)
   selenium-webdriver (= 4.8.3)
   solargraph (= 0.51.1)
   sprockets-rails (= 3.4.2)
   sqlite3 (= 1.6.1)
   stimulus-rails (= 1.2.1)
+  syslog (= 0.2.0)
   turbo-rails (= 1.4.0)
   web-console (= 4.2.0)
   webdrivers (= 5.2.0)
