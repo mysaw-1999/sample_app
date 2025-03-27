@@ -3,3 +3,4 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 import "custom/menu"
+import "cunstom/image_upload"
