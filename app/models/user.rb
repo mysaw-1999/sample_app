@@ -105,6 +105,21 @@ class User < ApplicationRecord
     following.include?(other_user)
   end
 
+  # パスワード再設定の期限が切れている場合はtrueを返す
+  def password_reset_expired?
+    reset_sent_at < 2.hours.ago
+  end
+
+  # ユーザーのステータスフィードを返す
+  def feed
+    Micropost.where("user_id IN (?) OR user_id = ?", following_ids, id)
+  end
+
+  # ユーザーをフォローする
+  def follow(other_user)
+    following << other_user unless self == other_user
+  end
+
   private
 
     # メールアドレスをすべて小文字にする
